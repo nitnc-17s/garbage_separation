@@ -1,1 +1,8 @@
 # require 'schemas/hoges.schema'
+
+require 'schemas/garbages.schema'
+require 'schemas/separations.schema'
+require 'schemas/cities.schema'
+require 'schemas/categories.schema'
+require 'schemas/garbage_notes.schema'
+require 'schemas/separation_notes.schema'

@@ -1,0 +1,9 @@
+create_table :separations, force: :cascade, id: :uuid, default: -> { 'gen_random_uuid()' } do |t|
+  t.references :city, type: :uuid, null: false
+
+  t.string :name, null: false
+
+  t.timestamps null: false
+
+  t.index [:name, :city_id], name: :index_separations_name_unique, unique: true
+end

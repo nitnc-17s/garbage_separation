@@ -1,0 +1,7 @@
+create_table :categories, force: :cascade, id: :uuid, default: -> { 'gen_random_uuid()' } do |t|
+  t.string :name, null: false
+
+  t.timestamps null: false
+
+  t.index :name, name: :index_categories_name_unique, unique: true
+end

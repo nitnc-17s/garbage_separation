@@ -1,0 +1,13 @@
+create_table :garbages, force: :cascade, id: :uuid, default: -> { 'gen_random_uuid()' } do |t|
+  t.references :category,   type: :uuid, null: false
+  t.references :city,       type: :uuid, null: false
+  t.references :separation, type: :uuid, null: false
+
+  t.string  :name,  null: false
+  t.integer :index, null: false
+
+  t.timestamps null: false
+
+  t.index [:name, :city_id], name: :index_garbages_name_unique, unique: true
+  t.index [:index, :city_id], name: :index_garbages_index_unique, unique: true
+end

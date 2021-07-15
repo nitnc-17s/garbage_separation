@@ -1,0 +1,8 @@
+create_table :separation_notes, force: :cascade, id: :uuid, default: -> { 'gen_random_uuid()' } do |t|
+  t.references :separation, type: :uuid, null: false
+
+  t.string :note, null: false
+  t.string :note_type, null: false
+
+  t.timestamps null: false
+end
