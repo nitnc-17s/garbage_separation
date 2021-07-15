@@ -41,6 +41,12 @@ gem 'seed-fu', '~> 2.3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug', '~> 3.7'
+  # Ruby code style checking
+  gem 'rubocop', '~> 1.10'
+  # A RuboCop extension focused on enforcing Rails best practices and coding conventions
+  gem 'rubocop-rails', '~> 2.9'
+  # RuboCop extension for RSpec
+  gem 'rubocop-rspec', '~> 2.2'
   # Testing framework
   gem 'rspec-rails', '~> 3.8'
   # Speed up RSpec using Spring
